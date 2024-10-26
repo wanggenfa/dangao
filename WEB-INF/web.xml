@@ -1,0 +1,35 @@
+<filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+        <param-name>forceEncoding</param-name>
+        <param-value>true</param-value>
+    </init-param>
+</filter>
+
+<filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<servlet>
+    <servlet-name>SubmitConsultServlet</servlet-name>
+    <servlet-class>servlet.SubmitConsultServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>SubmitConsultServlet</servlet-name>
+    <url-pattern>/submit_consult</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>AIChatServlet</servlet-name>
+    <servlet-class>servlet.AIChatServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AIChatServlet</servlet-name>
+    <url-pattern>/ai-chat</url-pattern>
+</servlet-mapping>
